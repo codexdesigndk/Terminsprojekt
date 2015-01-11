@@ -7,5 +7,9 @@
     </database-info>
     <case-sensitivity plain-identifiers="mixed" quoted-identifiers="upper"/>
     <schema name="" catalog="terminsprojekt"/>
+    <table name="Users" schema="" catalog="terminsprojekt" type="TABLE">
+      <column name="Id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <primary-key name="PRIMARY" columns="Id"/>
+    </table>
   </data-source>
 </component>
