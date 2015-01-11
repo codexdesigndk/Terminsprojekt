@@ -5,3 +5,5 @@
  * Date: 11/01/2015
  * Time: 20:43
  */
+
+echo "Terminsprojektet!";
