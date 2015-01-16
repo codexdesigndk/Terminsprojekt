@@ -1,0 +1,4 @@
+1; Anders; Hansen; Direktør; email:chefen@slipseknuden.eu;
+2; Annelise; Johnson;Sekretær;info@@slipseknuden.eu;
+3;Jan; Frandsen; Sælger; jf@slipseknuden.eu;
+4;Joe; Baylie;Sælger;jb@slipseknuden.eu

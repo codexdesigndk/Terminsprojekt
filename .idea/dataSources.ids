@@ -14,7 +14,8 @@
       <column name="Efternavn" sqlType="VARCHAR" precision="55" scale="0" nullable="false" jdbcType="12"/>
       <column name="Email" sqlType="VARCHAR" precision="90" scale="0" nullable="false" jdbcType="12"/>
       <column name="SidsteBesog" sqlType="TIMESTAMP" precision="19" scale="0" nullable="false" jdbcType="93" def="Q1VSUkVOVF9USU1FU1RBTVA=" version="true"/>
-      <column name="Adganskode" sqlType="VARCHAR" precision="90" scale="0" nullable="false" jdbcType="12"/>
+      <column name="Adgangskode" sqlType="VARCHAR" precision="90" scale="0" nullable="true" jdbcType="12"/>
+      <column name="Billedeurl" sqlType="VARCHAR" precision="55" scale="0" nullable="false" jdbcType="12"/>
       <primary-key name="PRIMARY" columns="Id"/>
     </table>
     <table name="log" schema="" catalog="terminsprojekt" type="TABLE">
@@ -42,6 +43,8 @@
       <column name="FK_Maarke" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
       <column name="Pris" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
       <column name="Billedeurl" sqlType="VARCHAR" precision="55" scale="0" nullable="false" jdbcType="12"/>
+      <column name="Beskrivelse" sqlType="TEXT" precision="65535" scale="0" nullable="false" jdbcType="-1"/>
+      <column name="Farve" sqlType="VARCHAR" precision="55" scale="0" nullable="false" jdbcType="12"/>
       <primary-key name="PRIMARY" columns="Id"/>
     </table>
     <table name="sider" schema="" catalog="terminsprojekt" type="TABLE">

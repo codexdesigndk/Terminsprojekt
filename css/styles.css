@@ -1,0 +1,262 @@
+/***************** General ******************/
+
+body,h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6 {
+    font-family: "Verdana", Arial, Helvetica, sans-serif;
+}
+
+ul {
+    padding:0;
+    margin:0;
+}
+
+h2 {
+    font-size:14px;
+    font-weight:bold;
+}
+
+h2.sidebar-titel {
+    padding-left:70px;
+    text-transform: uppercase;
+}
+
+.se-mere-link {
+    color:#000;
+    font-size:12px;
+    font-weight:bold;
+    text-transform: uppercase;
+}
+
+h3 {
+font-size:12px;
+font-weight:bold;
+text-transform: uppercase;
+}
+
+.pris {
+    font-size:14px;
+    font-weight:bold;
+}
+
+p {
+    font-size:12px;
+}
+
+
+.form-control {
+    height:34px;
+}
+
+/***************** Font Styles ******************/
+
+.footertext {
+    color: #a5a5a5;
+}
+
+/***************** Navigation ******************/
+nav {
+    height:50px;
+    font-size:14px;
+    width:100%;
+}
+
+.nav>li>a {
+    padding: 15px 10px;
+}
+
+@media (max-width:767px) {
+    .navbar-inverse {
+        background-color: #000!important;
+        border-color: #000!important;
+    }
+}
+
+
+@media (min-width:1040px) {
+    .container{
+        max-width: 1040px;
+    }
+}
+
+
+nav ul {
+    list-style: none;
+}
+
+.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+    background: #000;
+    border-color: #101010;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+
+
+.navbar-inverse {
+    background-color: #000;
+    border-color: #000;
+}
+
+
+.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:hover, .navbar-inverse .navbar-nav>.active>a:focus {
+    color: #fff;
+    background:none;
+}
+
+
+@media (max-width:760px) {
+    .navbar-collapse, .collapse, .in {
+        background: #000; /* Old browsers */
+    }
+}
+
+.navbar-inverse .navbar-nav>li>a {
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+aside.sidebar-menu {
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+aside.sidebar-menu > ul {
+    list-style-type: none;
+}
+
+aside.sidebar-menu > ul > li {
+    display: block;
+    color:#fff;
+    height:55px;
+    border-bottom:1px solid #fff;
+    padding:15px 20px 0px 20px;
+    background:#000;
+}
+
+.social {
+    margin:10px;
+}
+
+.max-width {
+    max-width:1024px;
+    margin:auto;
+}
+
+/***************** Content ******************/
+
+header {
+    height:175px;
+}
+
+header .container-fluid {
+    padding-top: 100px;
+}
+
+time {
+    color:#f88805;
+}
+
+article {
+    margin: 20px 0;
+}
+
+.logo {
+    margin-top:50px;
+    margin-left:30px;
+}
+
+aside.sidebar-lower {
+    padding:20px 90px 0px 10px;
+}
+
+.wrapper {
+    max-width:1040px;
+    margin: 0 auto;
+}
+
+
+
+.infobtn {
+    color:#fff;
+    font-weight:bold;
+    padding:5px 50px 5px 50px;
+    border-radius:15px;
+    background:#000;
+}
+
+.infobtn, a:hover {
+    color:#fff;
+}
+
+
+
+.kontakt-send {
+    text-transform: uppercase;
+    font-weight:bold;
+    padding:2px 20px 2px 20px;
+    border-radius:12px;
+    background:#fff;
+
+}
+
+#map_canvas {
+    height:320px;
+    width:320px;
+}
+
+@media (max-width:760px) {
+    #map_canvas {
+        height:320px;
+        width:100%;
+    }
+}
+
+@media (max-width:760px) {
+    .forsideprodukter {
+        text-align:center;
+    }
+}
+
+
+.divider {
+    margin-top:20px;
+}
+
+.divider-small {
+    margin-top:5px;
+    margin-bottom:5px;
+}
+
+.divider-produkt {
+    margin:15px 0;
+}
+
+.kontaktinfo {
+    padding-top:200px;
+    text-align:right;
+}
+
+@media (max-width:760px) {
+    .kontaktinfo {
+        padding-top:20px;
+        text-align:center;
+    }
+}
+
+.content {
+    min-height:400px;
+}
+
+.right-content {
+    margin-top:0px;
+}
+
+.forsideindhold {
+    padding-top:50px;
+}
+
+footer {
+    height:50px;
+}
+

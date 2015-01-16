@@ -236,3 +236,8 @@ ul.alert-dropdown {
     box-shadow: none;
     opacity: 1;
 }
+
+tr.linkrow:hover {
+    background-color: rgba(114, 179, 255, 0.30);
+    cursor: pointer;
+}
