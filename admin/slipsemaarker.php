@@ -28,7 +28,7 @@
                             if (!empty($_POST['submit'])) {
                                 $navn = $_POST['Navn'];
 
-                                $sql = "INSERT INTO maarke (Navn) VALUES ('$navn')";
+                                $sql = "INSERT INTO maarke (M_Navn) VALUES ('$navn')";
                                 mysqli_query($connection, $sql);
                                 header("Location: slipsemaarker.php");
                                 exit;
@@ -61,12 +61,12 @@
                                 while ($row = mysqli_fetch_array($result)) {
 
 
-                                    $linkrow = "ret_slipsemaarker.php?id=" . $row['Id'];
+                                    $linkrow = "ret_slipsemaarker.php?id=" . $row['M_Id'];
 
 
                                     echo "<tr class='linkrow' href='$linkrow'>";
-                                    echo "<td>" . $row['Navn'] . "</td>";
-                                    echo "<td><a class='btn btn-danger' href='slet_slipsemaarker.php?id=" . $row['Id'] . "'>Slet</a></td>";
+                                    echo "<td>" . $row['M_Navn'] . "</td>";
+                                    echo "<td><a class='btn btn-danger' href='slet_slipsemaarker.php?id=" . $row['M_Id'] . "'>Slet</a></td>";
                                     echo "</tr>";
 
                                 }

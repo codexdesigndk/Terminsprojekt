@@ -30,7 +30,7 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <?php
-                            $sql = "SELECT * FROM produkter";
+                            $sql = "SELECT * FROM produkter JOIN maarke ON produkter.FK_Maarke = maarke.M_Id";
                             $result = mysqli_query($connection, $sql);
 
                             echo "<table id='usertable' class='table'>";
@@ -47,7 +47,7 @@
                                 echo "<td><img src='../images/produktbilleder/thumb_" . $row['Billedeurl'] . "' width='70px'/></td>";
                                 echo "<td>" . $row['Id'] . "</td>";
                                 echo "<td>" . $row['Navn'] . "</td>";
-                                echo "<td>" . $row['FK_Maarke'] . "</td>";
+                                echo "<td>" . $row['M_Navn'] . "</td>";
                                 echo "<td>" . $row['Farve'] . "</td>";
                                 echo "<td>DKK " . $row['Pris'] . ",-</td>";
                                 echo "<td><a class='btn btn-danger' href='slet_produkt.php?id=" . $row['Id'] . "'>Slet</a></td>";

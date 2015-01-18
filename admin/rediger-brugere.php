@@ -19,7 +19,7 @@
                     <i class="fa fa-file"></i> <a href="brugere.php">Brugere</a>
                 </li>
                 <li class="active">
-                    <i class="fa fa-file"></i> Rediger brugere
+                    <i class="fa fa-file"></i> Rediger bruger
                 </li>
             </ol>
         </div>
@@ -68,7 +68,7 @@
                     $new_Titel = $Titel;
                     $Titel_sql = ", `Titel`='$Titel'"; //this is the first one so no coma is required at the front
                     /* LOGGING */
-                    $log_sql = "INSERT INTO log (Bruger ,Dato , Beskrivelse) VALUES ('$id', '$time', 'Har skiftet sin titel.')";
+                    $log_sql = "INSERT INTO log (Bruger ,Dato , Beskrivelse) VALUES ('$_SESSION[user_id]', '$time', 'Bruger-ID($id) - Titel ændret til ( $Titel )')";
                     mysqli_query($connection, $log_sql);
                 } else {
                     $Titel_sql = "";
@@ -78,7 +78,7 @@
                     $new_Fornavn = $Fornavn;
                     $Fornavn_sql = ", `Fornavn`='$Fornavn'"; //this is the first one so no coma is required at the front
                     /* LOGGING */
-                    $log_sql = "INSERT INTO log (Bruger ,Dato , Beskrivelse) VALUES ('$id', '$time', 'Har skiftet sin titel.')";
+                    $log_sql = "INSERT INTO log (Bruger ,Dato , Beskrivelse) VALUES ('$_SESSION[user_id]', '$time', 'Bruger-ID($id) - Fornavn ændret til ( $Fornavn )')";
                     mysqli_query($connection, $log_sql);
                 } else {
                     $Fornavn_sql = "";
@@ -88,7 +88,7 @@
                     $new_Efternavn = $Efternavn;
                     $Efternavn_sql = ", `Efternavn`='$Efternavn'"; //this is the first one so no coma is required at the front
                     /* LOGGING */
-                    $log_sql = "INSERT INTO log (Bruger ,Dato , Beskrivelse) VALUES ('$id', '$time', 'Har skiftet sin titel.')";
+                    $log_sql = "INSERT INTO log (Bruger ,Dato , Beskrivelse) VALUES ('$_SESSION[user_id]', '$time', 'Bruger-ID($id) - Efternavn ændret til ( $Efternavn )')";
                     mysqli_query($connection, $log_sql);
                 } else {
                     $Efternavn_sql = "";
@@ -98,7 +98,7 @@
                     $new_Email = $Email;
                     $Email_sql = ", `Email`='$Email'"; //this is the first one so no coma is required at the front
                     /* LOGGING */
-                    $log_sql = "INSERT INTO log (Bruger ,Dato , Beskrivelse) VALUES ('$id', '$time', 'Har skiftet sin titel.')";
+                    $log_sql = "INSERT INTO log (Bruger ,Dato , Beskrivelse) VALUES ('$_SESSION[user_id]', '$time', 'Bruger-ID($id) - Email ændret til ( $Email )')";
                     mysqli_query($connection, $log_sql);
                 } else {
                     $Email_sql = "";
@@ -109,7 +109,7 @@
                     $hash = password_hash($passwordset, PASSWORD_DEFAULT);
                     $password_sql = ", `Adgangskode`='$hash'";
                     /* LOGGING */
-                    $log_sql = "INSERT INTO log (Bruger ,Dato , Beskrivelse) VALUES ('$id', '$time', 'Har skiftet sin titel.')";
+                    $log_sql = "INSERT INTO log (Bruger ,Dato , Beskrivelse) VALUES ('$_SESSION[user_id]', '$time', 'Bruger-ID($id) - Adgangskode ændret')";
                     mysqli_query($connection, $log_sql);
                 } else {
                     $password_sql = "";

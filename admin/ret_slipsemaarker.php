@@ -11,7 +11,8 @@
                     <h1 class="page-header">Slipsemærker</h1>
                     <ol class="breadcrumb">
                         <li><i class="fa fa-dashboard"></i> <a href="index.php">Dashboard</a></li>
-                        <li class="active"><i class="fa fa-file"></i> Slipsemærker</li>
+                        <li><i class="fa fa-file"></i> <a href="slipsemaarker.php">Slipsemærker</a></li>
+                        <li class="active"><i class="fa fa-file"></i> Rediger mærke</li>
                     </ol>
                 </div>
             </div>
@@ -33,17 +34,17 @@
                                     if (isset($_POST['submit'])) {
                                         $navn = $_POST['Navn'];
 
-                                        $sql = "UPDATE maarke SET Navn ='$navn' WHERE Id=$id";
+                                        $sql = "UPDATE maarke SET M_Navn ='$navn' WHERE M_Id=$id";
                                         mysqli_query($connection, $sql);
                                         header("Location: slipsemaarker.php");
                                         exit;
 
                                     } else {
-                                        $sql = "SELECT * FROM maarke WHERE Id=$id";
+                                        $sql = "SELECT * FROM maarke WHERE M_Id=$id";
                                         $result = mysqli_query($connection, $sql);
                                         $row = mysqli_fetch_array($result);
 
-                                        $titel = $row['Navn'];
+                                        $titel = $row['M_Navn'];
                                     }
 
                                 }

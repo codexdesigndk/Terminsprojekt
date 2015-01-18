@@ -114,9 +114,9 @@
 
                                                 while ($row = mysqli_fetch_array($result)) {
                                                     echo "<option value='";
-                                                    echo $row['Id'];
+                                                    echo $row['M_Id'];
                                                     echo "'>";
-                                                    echo $row['Navn'];
+                                                    echo $row['M_Navn'];
                                                     echo "</option>";
                                                 }
                                                 ?>

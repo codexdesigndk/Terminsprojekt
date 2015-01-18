@@ -9,7 +9,7 @@
 
         echo "<ul>";
         while ($row = mysqli_fetch_array($result)) {
-            echo "<li><a href='#'>" . $row['Navn'] . "</a></li>";
+            echo "<li><a href='#'>" . $row['M_Navn'] . "</a></li>";
         }
 
         echo "</ul>";

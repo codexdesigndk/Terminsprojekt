@@ -9,7 +9,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <h1 class="page-header">
-                        Users
+                        Log
                         <small></small>
                     </h1>
                     <ol class="breadcrumb">
@@ -17,7 +17,7 @@
                             <i class="fa fa-dashboard"></i> <a href="index.php">Dashboard</a>
                         </li>
                         <li class="active">
-                            <i class="fa fa-file"></i> Logs
+                            <i class="fa fa-file"></i> Log
                         </li>
                     </ol>
                 </div>
@@ -30,26 +30,24 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <?php
-                                $sql = "SELECT * FROM notifications";
-                                $result = mysqli_query($main, $sql);
+                                $sql = "SELECT * FROM log";
+                                $result = mysqli_query($connection, $sql);
 
                                 echo "<table id='logstable' class='table'>";
                                 echo "<thead>";
-                                echo "<tr>" . "<th>Id</th>" . "<th>Type</th>" . "<th>User/Unit ID</th>" . "<th>Username</th>" . "<th>Description</th>" . "<th>Date</th>";
+                                echo "<tr>" . "<th>Id</th>" . "<th>Bruger ID</th>" . "<th>Dato</th>" . "<th>Beskrivelse</th>";
                                 echo "</thead>";
 
                                 echo "<tbody>";
                                 while ($row = mysqli_fetch_array($result)) {
-                                    $date_timestamp = $row['timeChanged'];
+                                    $date_timestamp = $row['Dato'];
                                     $date_string = date('Y-n-j, H:i:s', $date_timestamp);
 
                                     echo "<tr>";
-                                    echo "<td>" . $row['id'] . "</td>";
-                                    echo "<td>" . $row['typeChanged'] . "</td>";
-                                    echo "<td>" . $row['userid'] . "</td>";
-                                    echo "<td>" . $row['username'] . "</td>";
-                                    echo "<td>" . $row['description'] . "</td>";
+                                    echo "<td>" . $row['Id'] . "</td>";
+                                    echo "<td>" . $row['Bruger'] . "</td>";
                                     echo "<td>" . $date_string . "</td>";
+                                    echo "<td>" . $row['Beskrivelse'] . "</td>";
                                     echo "</tr>";
 
                                 }
